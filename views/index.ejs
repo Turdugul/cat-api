@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <title>Cats API</title>
+  </head>
+  <body>
+    <h1>
+      All cats from
+      <a
+        href="https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t"
+        >TheCatAPI - Documentation Portal</a
+      >
+    </h1>
+    <div class="container">
+      <div>
+        <ul>
+          <% cats.forEach(cat => { %>
+          <div>
+            <li>
+              <p>Cat <%= cat.number %></p>
+              <div class="box-img">
+                <img src="<%= cat.url %>" alt=" a cat" />
+              </div>
+            </li>
+          </div>
+
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
